@@ -3,6 +3,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'CustomSearchDelegate.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   @override
@@ -21,6 +23,15 @@ class HomeScreen extends StatelessWidget {
 
 
           ),
+        actions: [
+          IconButton(
+              onPressed: (){
+                showSearch(
+                  context: context,
+                  delegate: CustomSearchDelegate());
+              },
+              icon: Icon(Icons.search))
+        ],
 
 
 
@@ -28,11 +39,8 @@ class HomeScreen extends StatelessWidget {
 
 
 
-      body: const Center(
-        child: Text(
-          "hello kiran"
-        ),
-      ),
+
+
 
 
 
